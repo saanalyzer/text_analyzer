@@ -1,5 +1,8 @@
 # text_analyzer
-Functions:
+
+ * Code are in the site folder. 
+ * Link to website : https://laramerdol.github.io/text_analyzer/site/
+  Functions:
   -Word count
   -Number of Letters
   -Longest word
@@ -7,6 +10,4 @@ Functions:
   -Reading Duration in Seconds
   -BONUS: Median word length
   -BOUNS: Median word when sorted by length
-  Code are in the site folder.
-Link to website : https://laramerdol.github.io/text_analyzer/site/
 
