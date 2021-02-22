@@ -2,7 +2,7 @@
 
  * Code are in the site folder. 
  * Link to website : https://laramerdol.github.io/text_analyzer/site/
- *Functions:
+ * Functions:
   -Word count
   -Number of Letters
   -Longest word
