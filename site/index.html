@@ -45,12 +45,17 @@
             <div id ="word"> </div>
           </li>
          <li>
-              Median Size
+              Median Word Size
 
 
             <div id ="median"> </div>
           </li> 
+         <li>
+              Median Word
 
+
+            <div id ="medianW"> </div>
+          </li> 
       </ul>
 
 
@@ -69,11 +74,15 @@
           text1 = text.value.replace(/[^A-Za-z0-9-]/g, "*");
           const arr2= text1.split("*");
           const arr3 =[];
+          const arr4 =[];
+
           var wordCount1 = 0;
-          for (var i = arr2.length - 1; i >= 0; i--) {
+          for (var i = 0; i<arr2.length; i ++) {
             var worD = arr2[i];
             if(worD.length >=1){
               console.log(worD);
+              arr4.push(arr2[i]);
+
               arr3.push(worD.length);
               console.log(worD.length);
               wordCount1++;
@@ -94,7 +103,10 @@
           document.getElementById("word").innerHTML= max;
 
           arr3.sort(function(a, b){return a-b});
-          document.getElementById("median").innerHTML= arr3[parseInt(arr3.length/2)];
+          arr4.sort(function(a, b) {return a.length - b.length || a.localeCompare(b);});
+          document.getElementById("median").innerHTML= arr3[parseInt(arr3.length/2)+1];
+          document.getElementById("medianW").innerHTML= arr4[parseInt(arr4.length/2)+1];
+
           function readingTime(textQ) {
             const wordsPerSec = 3;
             const noOfWords = textQ.split(/\s/g).length;
