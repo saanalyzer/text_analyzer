@@ -3,7 +3,7 @@
     margin: 10px;
     padding: 10px;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Tahoma, sans-serif;
   
 
 }
@@ -18,17 +18,28 @@ body {
   align-items: center;
 
 }
+#time{
+  font-family: Tahoma, sans-serif;
+  font-size: small;
+  color: gray;
+  font-weight: bolder;
+
+  background-blend-mode: hard-light;
+
+}
 div {
     margin: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Tahoma, sans-serif;
     line-height: 1.4;
     text-decoration: none;
+    font-weight: normal;
+
 }
 textarea{
     margin-bottom:6%; 
     width: 80%;
-    height: 30%;
-    border: 3px solid #cccccc;
+    height:70%;
+    border: 3px solid #333333;
 
     font-family: Tahoma, sans-serif;
     background-position: bottom right;
@@ -72,11 +83,14 @@ input {
     width: 30%;
     height: 10%;
     margin-top: 2%;
+    font-weight: bolder;
+    color :  #333;
     }
 }
 
 @media  (max-width: 600px){
     ul  li {
+    color :  #333;
     font-size: medium;
     background: #FDF5E6;
     background-color: #FDF5E6;
@@ -85,5 +99,6 @@ input {
     width: 80%;
     height: 10%;
     margin-top: 2%;
+    font-weight: bolder;
     }
 }

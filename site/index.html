@@ -19,7 +19,8 @@
       <textarea type="text"  id="review" onchange="handleChange()"> Type something...</textarea> 
 
 
-      <label for="review"><input type="submit" value="Analyze" /></label>
+      <label for="review"><input type="submit" value="Analyze" />  </div> </label>
+      <div id = "time"> Reading Time : <span id= "readTime"> </span> </div>
       <ul>
          <li>
               Letter Count
@@ -63,11 +64,25 @@
           var text1 = text.value;
           
           text1 = text1.replace(/[^A-Za-z0-9-]/g, "");
+          var lengthText = text1.length
           document.getElementById("size1").innerHTML= text1.length;
           text1 = text.value.replace(/[^A-Za-z0-9-]/g, "*");
-          document.getElementById("wordCount").innerHTML= text1.split("*").length;
-          var numbers =parseInt( text1.split("*").map((word) => word.length).reduce((a, b) => a + b) / text.value.split(" ").length);
-          document.getElementById("average").innerHTML= numbers;
+          const arr2= text1.split("*");
+          const arr3 =[];
+          var wordCount1 = 0;
+          for (var i = arr2.length - 1; i >= 0; i--) {
+            var worD = arr2[i];
+            if(worD.length >=1){
+              console.log(worD);
+              arr3.push(worD.length);
+              console.log(worD.length);
+              wordCount1++;
+            }
+          }
+
+          document.getElementById("wordCount").innerHTML= wordCount1;
+
+          document.getElementById("average").innerHTML= parseInt(lengthText/wordCount1);
           const strings = text1.split("*");
           var max = "";
           for(var i = 0;i<strings.length;i++){
@@ -77,10 +92,20 @@
 
           }
           document.getElementById("word").innerHTML= max;
-          const arr =  text1.split("*").map((word) => word.length);
-          arr.sort(function(a, b){return a-b});
-          document.getElementById("median").innerHTML= arr[parseInt(arr.length/2)];
 
+          arr3.sort(function(a, b){return a-b});
+          document.getElementById("median").innerHTML= arr3[parseInt(arr3.length/2)];
+          function readingTime(textQ) {
+            const wordsPerSec = 3;
+            const noOfWords = textQ.split(/\s/g).length;
+            const minutes = noOfWords / wordsPerSec;
+            const readTime = Math.ceil(minutes);
+            return `${readTime} second read`
+          }
+          var readTime1 = readingTime(text.value);
+          document.getElementById("readTime").innerHTML= readTime1;
+          console.log(text.value.split(/\s/g).length);
+          console.log(readTime1);
        }
 
 
