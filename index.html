@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text Analyzer</title>
+  
+    <link rel="stylesheet" href="app.css">
+
+
+
+  </head>
+<body>
+  <header>
+
+      
+        
+
+      <textarea type="text"  id="review" onchange="handleChange()"> Type something...</textarea> 
+
+
+      <label for="review"><input type="submit" value="Analyze" /></label>
+      <ul>
+         <li>
+              Letter Count
+              <div id = "size1"></div>
+          </li>
+         <li>
+            Word Count
+
+
+              <div id= "wordCount" ></div>
+        </li>
+         <li>
+              Average Word Length
+
+
+            <div id ="average"> </div>
+          </li>                  
+         <li>
+              Longest Word
+
+
+            <div id ="word"> </div>
+          </li>
+         <li>
+              Median Size
+
+
+            <div id ="median"> </div>
+          </li> 
+
+      </ul>
+
+
+
+
+  </header>
+      <script>
+        
+        function handleChange() {
+          var text =document.getElementById("review");
+          var text1 = text.value;
+          
+          text1 = text1.replace(/[^A-Za-z0-9-]/g, "");
+          document.getElementById("size1").innerHTML= text1.length;
+          text1 = text.value.replace(/[^A-Za-z0-9-]/g, "*");
+          document.getElementById("wordCount").innerHTML= text1.split("*").length;
+          var numbers =parseInt( text1.split("*").map((word) => word.length).reduce((a, b) => a + b) / text.value.split(" ").length);
+          document.getElementById("average").innerHTML= numbers;
+          const strings = text1.split("*");
+          var max = "";
+          for(var i = 0;i<strings.length;i++){
+            if(strings[i].length>max.length){
+              max = strings[i];
+            }
+
+          }
+          document.getElementById("word").innerHTML= max;
+          const arr =  text1.split("*").map((word) => word.length);
+          arr.sort(function(a, b){return a-b});
+          document.getElementById("median").innerHTML= arr[parseInt(arr.length/2)];
+
+       }
+
+
+
+
+
+      </script>  
+</body>
+</html>
