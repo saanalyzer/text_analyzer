@@ -9,3 +9,4 @@ Functions:
   -BOUNS: Median word when sorted by length
   Code are in the site folder.
 Link to website : https://laramerdol.github.io/text_analyzer/site/
+
