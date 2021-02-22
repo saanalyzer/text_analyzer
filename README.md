@@ -9,4 +9,3 @@ Functions:
 BOUNS: Median word when sorted by length
 BONUS: Top 5 most common words
 BONUS: Guess the text language (english and turkish only)
-https://laramerdol.github.io/text_analyzer/site/
