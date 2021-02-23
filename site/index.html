@@ -101,11 +101,10 @@
 
           }
           document.getElementById("word").innerHTML= max;
-
           arr3.sort(function(a, b){return a-b});
           arr4.sort(function(a, b) {return a.length - b.length || a.localeCompare(b);});
-          document.getElementById("median").innerHTML= arr3[parseInt(arr3.length/2)+1];
-          document.getElementById("medianW").innerHTML= arr4[parseInt(arr4.length/2)+1];
+          document.getElementById("median").innerHTML= arr3[parseInt(arr3.length/2)];
+          document.getElementById("medianW").innerHTML= arr4[parseInt(arr4.length/2)];
 
           function readingTime(textQ) {
             const wordsPerSec = 3;
