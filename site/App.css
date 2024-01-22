@@ -11,7 +11,7 @@
 body {
 
     width: 100%;
-  background: #0f2027; /* fallback for old browsers */
+  background: #0f2027; /* fallback for old browsers MOCK */
   background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
   display: flex;
   justify-content: center;
