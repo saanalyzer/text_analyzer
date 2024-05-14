@@ -15,4 +15,15 @@ public class SampleClass {
         }
         return y;
     }
+
+    public int getMaximum(){
+        if(x < y){
+            return y;
+        }
+        return x;
+    }
+
+    public int getSum(){
+        return x + y;
+    }
 }
