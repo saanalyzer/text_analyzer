@@ -80,5 +80,7 @@ public class TextAnalyzerExample {
 
         // Frontend Mock Issues
         TextAnalyzerFrontend frontend = new TextAnalyzerFrontend();
+
+        // Sample Comment
     }
 }       
