@@ -11,7 +11,11 @@ public class AnotherClass {
         return str.length();
     }
 
-    public char getCharacter(){
-        return 'a';
+    public char getCharacter(int ind){
+        if(ind >= this.getLength()){
+            return '-';
+        }
+        char[] strArray = str.toCharArray();
+        return strArray[ind];
     }
 }
