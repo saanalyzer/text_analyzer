@@ -9,7 +9,7 @@ public class SampleClass {
         this.y = y;
     }
 
-    public int getMin(){
+    public int getMinimum(){
         if (x < y){
             return x;
         }
