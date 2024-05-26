@@ -23,6 +23,10 @@ public class SampleClass {
         return x;
     }
 
+    /**
+     * Returns the sum of x and y
+     * @return integer
+     */
     public int getSum(){
         return x + y;
     }
