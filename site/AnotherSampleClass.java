@@ -18,4 +18,8 @@ public class AnotherSampleClass {
         char[] strArray = str.toCharArray();
         return strArray[ind];
     }
+
+    public char getFirstElement(){
+        return getCharacter(0);
+    }
 }
