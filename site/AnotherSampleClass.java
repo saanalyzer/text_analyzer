@@ -13,7 +13,7 @@ public class AnotherSampleClass {
 
     public char getCharacter(int ind){
         if(ind >= this.getLength()){
-            return '-';
+            return ' ';
         }
         char[] strArray = str.toCharArray();
         return strArray[ind];
