@@ -22,4 +22,8 @@ public class AnotherSampleClass {
     public char getFirstElement(){
         return getCharacter(0);
     }
+
+    public char getLastEl(){
+        return getCharacter(getLength()-1);
+    }
 }
