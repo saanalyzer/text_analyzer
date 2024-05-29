@@ -23,7 +23,7 @@ public class AnotherSampleClass {
         return getCharacter(0);
     }
 
-    public char getLastEl(){
+    public char getLastElement(){
         return getCharacter(getLength()-1);
     }
 }
