@@ -1,9 +1,9 @@
 package site;
 
-public class AnotherSampleClass {
+public class SecondSampleClass {
     String str;
 
-    public AnotherSampleClass(String str){
+    public SecondSampleClass(String str){
         this.str = str;
     }
 
