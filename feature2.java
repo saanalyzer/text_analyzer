@@ -4,7 +4,7 @@ class TextAnalyzerBackend {
     // Simulating inconsistent behavior
     public String analyzeTextInconsistent(String text) {
         // Simulating inconsistency in result format
-        if (Math.random() < 0.5) {
+        if (Math.random() < 0.1) {
             return "Positive";
         } else {
             return "Negative Analysis Result";
